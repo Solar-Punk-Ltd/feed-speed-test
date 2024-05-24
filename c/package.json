@@ -1,0 +1,78 @@
+{
+  "name": "@ethersphere/swarm-cli",
+  "version": "2.8.0",
+  "description": "CLI tool for Bee",
+  "keywords": [
+    "Bee",
+    "Swarm",
+    "CLI",
+    "swarm-cli",
+    "Decentralised Storage"
+  ],
+  "bin": {
+    "swarm-cli": "./dist/src/index.js"
+  },
+  "homepage": "https://github.com/ethersphere/swarm-cli",
+  "bugs": {
+    "url": "https://github.com/ethersphere/swarm-cli/issues/"
+  },
+  "license": "BSD-3-Clause",
+  "main": "dist/src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethersphere/swarm-cli.git"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "rimraf dist && tsc",
+    "test": "jest --config=jest.config.ts",
+    "test:coverage": "jest --config=jest.config.ts --coverage",
+    "types:check": "tsc --project tsconfig.test.json",
+    "start": "ts-node src/index.ts",
+    "lint": "eslint --fix \"src/**/*.ts\" \"test/**/*.ts\" && prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:check": "eslint \"src/**/*.ts\" \"test/**/*.ts\" && prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "bee": "bee-factory start"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0",
+    "bee": "1.9.0-13a47043"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@ethersphere/bee-factory": "^0.5.0",
+    "@types/cli-progress": "^3.8.0",
+    "@types/inquirer": "^8.2.5",
+    "@types/jest": "^29.2.3",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "cafe-utility": "^10.8.1",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^27.1.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^4.3.6",
+    "jest": "^29.3.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@ethersphere/bee-js": "^6.9.1",
+    "@fairdatasociety/bmt-js": "^2.1.0",
+    "bignumber.js": "^9.1.0",
+    "chalk": "^2.4.2",
+    "cli-progress": "^3.11.2",
+    "ethereumjs-wallet": "^1.0.2",
+    "furious-commander": "^1.7.1",
+    "inquirer": "^8.2.5",
+    "mantaray-js": "^1.0.3",
+    "ora": "^5.3.0",
+    "ws": "^8.11.0"
+  }
+}

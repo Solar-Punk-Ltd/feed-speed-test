@@ -1,0 +1,3 @@
+# ignore config used at tests
+*.json
+*.txt
