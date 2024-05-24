@@ -19,10 +19,10 @@ function writeFeed {
   echo "Writing to index " $1
   #swarm-cli feed update  \
   node swarm-cli/dist/src/index.js feed update \
-    --topic-string "Sharded Sepolia Test - 46" \
+    --topic-string "topic for testing" \
     --reference $reference \
     --identity main \
-    --stamp 80adb4be9e982cf25e8b8608787905d3351c7ab708484f07ddd8f8c7a6695cee \
+    --stamp STAMP_PLACEHOLDER \
     --index $1
 }
 
